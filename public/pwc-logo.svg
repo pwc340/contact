@@ -1,8 +1,0 @@
-<svg width="1485" height="740" viewBox="0 0 1485 740" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Orange diagonal stripes -->
-  <path d="M735 0L1090 0L780 110L425 110L735 0Z" fill="#FF6B00"/>
-  <path d="M1155 15L1485 15L1485 110L1155 110L1155 15Z" fill="#FF6B00"/>
-  
-  <!-- PwC text -->
-  <text x="13" y="650" font-family="Georgia, serif" font-size="580" font-weight="bold" fill="#000000">pwc</text>
-</svg>
