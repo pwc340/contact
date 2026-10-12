@@ -25,5 +25,13 @@
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: Georgia, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, Arial, sans-serif;
+}
+
+button, input, select, textarea {
+  font-family: Arial, sans-serif;
 }

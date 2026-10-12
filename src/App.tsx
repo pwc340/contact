@@ -139,9 +139,9 @@ function App() {
           <div className="flex items-center gap-2">
             <svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(0, 8)">
-                <path d="M0 0h12.5c6.9 0 11.5 4.3 11.5 10.8 0 6.4-4.6 10.8-11.5 10.8H5.2V32H0V0zm5.2 17.2h6.8c4.2 0 6.8-2.4 6.8-6.4 0-4-2.6-6.4-6.8-6.4H5.2v12.8z" fill="hsl(var(--primary))"/>
-                <path d="M28.5 14.5l-4.3 17.5h-5.3L25.8 0h6.4l4.8 19.2L41.8 0h5.3l5.8 19.2L57.7 0h6.4l-6.9 32h-5.3l-5.5-19.5L41.9 32h-5.3l-8.1-17.5z" fill="hsl(var(--primary))"/>
-                <path d="M90.8 16.1c0 9.1-6.4 16.4-15.5 16.4-7.5 0-13.2-5.1-14.8-12.1h6c1.3 4.3 5.1 7.2 9.5 7.2 5.5 0 9.6-4.5 9.6-11.5 0-7-4.1-11.5-9.6-11.5-4.4 0-8.2 2.9-9.5 7.2h-6c1.6-7 7.3-12.1 14.8-12.1 9.1 0 15.5 7.3 15.5 16.4z" fill="hsl(var(--primary))"/>
+                <path d="M0 0h12.5c6.9 0 11.5 4.3 11.5 10.8 0 6.4-4.6 10.8-11.5 10.8H5.2V32H0V0zm5.2 17.2h6.8c4.2 0 6.8-2.4 6.8-6.4 0-4-2.6-6.4-6.8-6.4H5.2v12.8z" fill="#D04A02"/>
+                <path d="M28.5 14.5l-4.3 17.5h-5.3L25.8 0h6.4l4.8 19.2L41.8 0h5.3l5.8 19.2L57.7 0h6.4l-6.9 32h-5.3l-5.5-19.5L41.9 32h-5.3l-8.1-17.5z" fill="#D04A02"/>
+                <path d="M90.8 16.1c0 9.1-6.4 16.4-15.5 16.4-7.5 0-13.2-5.1-14.8-12.1h6c1.3 4.3 5.1 7.2 9.5 7.2 5.5 0 9.6-4.5 9.6-11.5 0-7-4.1-11.5-9.6-11.5-4.4 0-8.2 2.9-9.5 7.2h-6c1.6-7 7.3-12.1 14.8-12.1 9.1 0 15.5 7.3 15.5 16.4z" fill="#D04A02"/>
               </g>
             </svg>
           </div>
@@ -178,15 +178,15 @@ function App() {
       </header>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-orange-600 text-primary-foreground py-12 md:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-primary to-orange-600 py-12 md:py-20 lg:py-24">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
             Contact us
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+          <p className="text-lg md:text-xl max-w-2xl mx-auto text-white">
             We'd love to hear from you. Send us a message and we'll respond as soon as possible.
           </p>
-          <Badge variant="secondary" className="text-base px-4 py-2 bg-white/20 hover:bg-white/30 border-white/30">
+          <Badge variant="secondary" className="text-base px-4 py-2 bg-white/20 hover:bg-white/30 border-white/30 text-white">
             <Clock className="w-4 h-4 mr-2" />
             We respond within 24 hours
           </Badge>
