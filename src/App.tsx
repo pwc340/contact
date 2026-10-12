@@ -135,7 +135,7 @@ function App() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g transform="translate(0, 8)">
@@ -166,7 +166,7 @@ function App() {
 
         {mobileMenuOpen && (
           <div className="lg:hidden border-t">
-            <nav className="container py-4 flex flex-col space-y-4">
+            <nav className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col space-y-3">
               <a href="#services" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Services</a>
               <a href="#industries" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Industries</a>
               <a href="#insights" className="text-sm font-medium hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Insights</a>
@@ -178,8 +178,8 @@ function App() {
       </header>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-primary to-orange-600 text-primary-foreground py-16 md:py-24">
-        <div className="container text-center space-y-4">
+      <section className="bg-gradient-to-r from-primary to-orange-600 text-primary-foreground py-12 md:py-20 lg:py-24">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
             Contact us
           </h1>
@@ -194,18 +194,19 @@ function App() {
       </section>
 
       {/* Main Content */}
-      <main className="flex-1 container py-12 md:py-16">
-        <div className="grid gap-8 lg:grid-cols-3">
-          {/* Form */}
-          <div className="lg:col-span-2">
-            <Card>
-              <CardHeader>
+      <main className="flex-1">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
+          <div className="grid gap-6 lg:gap-8 lg:grid-cols-3">
+            {/* Form */}
+            <div className="lg:col-span-2">
+              <Card>
+              <CardHeader className="p-6 pb-4">
                 <CardTitle>Send us a message</CardTitle>
                 <CardDescription>
                   Fill out the form below and we'll get back to you shortly
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-6 pt-0">
                 {submitSuccess && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
@@ -217,7 +218,7 @@ function App() {
                 )}
 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First name *</Label>
                       <Input
@@ -358,16 +359,16 @@ function App() {
                     )}
                   </div>
 
-                  <div className="flex items-start space-x-2">
+                  <div className="flex items-start gap-3">
                     <input
                       type="checkbox"
                       id="consent"
                       name="consent"
                       checked={formData.consent}
                       onChange={handleChange}
-                      className="mt-1"
+                      className="mt-1 h-4 w-4"
                     />
-                    <Label htmlFor="consent" className="text-sm font-normal leading-relaxed cursor-pointer">
+                    <Label htmlFor="consent" className="text-sm font-normal leading-relaxed cursor-pointer flex-1">
                       I agree to PwC's <a href="#privacy" className="text-primary hover:underline">Privacy Policy</a> and consent to my personal information being used to contact me about services. *
                     </Label>
                   </div>
@@ -401,14 +402,14 @@ function App() {
             </Card>
           </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Security Badges */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Security & Privacy</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+            {/* Sidebar */}
+            <div className="space-y-6">
+              {/* Security Badges */}
+              <Card>
+                <CardHeader className="p-6 pb-4">
+                  <CardTitle className="text-lg">Security & Privacy</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
                 <div className="flex items-center gap-3">
                   <Shield className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium">Secure & Encrypted</span>
@@ -420,12 +421,12 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* Testimonials */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What our clients say</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              {/* Testimonials */}
+              <Card>
+                <CardHeader className="p-6 pb-4">
+                  <CardTitle className="text-lg">What our clients say</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-4">
                 <blockquote className="text-sm italic text-muted-foreground">
                   "PwC's expertise and professionalism helped us navigate complex challenges with confidence."
                 </blockquote>
@@ -452,12 +453,12 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* Contact Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Other ways to reach us</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
+              {/* Contact Info */}
+              <Card>
+                <CardHeader className="p-6 pb-4">
+                  <CardTitle className="text-lg">Other ways to reach us</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0 space-y-5">
                 <div>
                   <div className="flex items-center gap-2 font-medium mb-2">
                     <Phone className="w-4 h-4 text-primary" />
@@ -490,12 +491,12 @@ function App() {
               </CardContent>
             </Card>
 
-            {/* Careers */}
-            <Card className="bg-muted">
-              <CardHeader>
-                <CardTitle className="text-lg">Join our team</CardTitle>
-              </CardHeader>
-              <CardContent>
+              {/* Careers */}
+              <Card className="bg-muted">
+                <CardHeader className="p-6 pb-4">
+                  <CardTitle className="text-lg">Join our team</CardTitle>
+                </CardHeader>
+                <CardContent className="p-6 pt-0">
                 <p className="text-sm text-muted-foreground mb-4">
                   Explore career opportunities at PwC India and be part of a diverse, innovative team.
                 </p>
@@ -509,13 +510,14 @@ function App() {
                 </Button>
               </CardContent>
             </Card>
+            </div>
           </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted border-t mt-16">
-        <div className="container py-8">
+      <footer className="bg-muted border-t mt-12 md:mt-16 lg:mt-20">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <nav className="flex flex-wrap justify-center gap-6">
               <a href="#privacy" className="text-sm hover:text-primary transition-colors">Privacy</a>
@@ -533,7 +535,7 @@ function App() {
       {/* Chat Widget */}
       <Button
         size="icon"
-        className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 h-12 w-12 sm:h-14 sm:w-14 rounded-full shadow-lg"
         aria-label="Chat with us"
       >
         <MessageCircle className="h-6 w-6" />
