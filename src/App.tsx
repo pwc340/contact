@@ -137,13 +137,7 @@ function App() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g transform="translate(0, 8)">
-                <path d="M0 0h12.5c6.9 0 11.5 4.3 11.5 10.8 0 6.4-4.6 10.8-11.5 10.8H5.2V32H0V0zm5.2 17.2h6.8c4.2 0 6.8-2.4 6.8-6.4 0-4-2.6-6.4-6.8-6.4H5.2v12.8z" fill="#D04A02"/>
-                <path d="M28.5 14.5l-4.3 17.5h-5.3L25.8 0h6.4l4.8 19.2L41.8 0h5.3l5.8 19.2L57.7 0h6.4l-6.9 32h-5.3l-5.5-19.5L41.9 32h-5.3l-8.1-17.5z" fill="#D04A02"/>
-                <path d="M90.8 16.1c0 9.1-6.4 16.4-15.5 16.4-7.5 0-13.2-5.1-14.8-12.1h6c1.3 4.3 5.1 7.2 9.5 7.2 5.5 0 9.6-4.5 9.6-11.5 0-7-4.1-11.5-9.6-11.5-4.4 0-8.2 2.9-9.5 7.2h-6c1.6-7 7.3-12.1 14.8-12.1 9.1 0 15.5 7.3 15.5 16.4z" fill="#D04A02"/>
-              </g>
-            </svg>
+            <img src="/contact/pwc-logo.svg" alt="PwC" className="h-10 w-auto" />
           </div>
 
           <button
