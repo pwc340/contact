@@ -1,0 +1,948 @@
+/* PwC India Contact Page Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pwc-orange: #fd5108;
+  --pwc-blue: #3860BE;
+  --pwc-dark-blue: #2b4a8c;
+  --pwc-black: #000000;
+  --pwc-gray: #464646;
+  --pwc-light-gray: #F5F7F8;
+  --pwc-border: #E0E0E0;
+  --pwc-error: #fd5108;
+  --pwc-success: #008A00;
+  --pwc-white: #FFFFFF;
+}
+
+body {
+  font-family: 'PwC Helvetica Neue', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--pwc-gray);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--pwc-white);
+  border-bottom: 1px solid var(--pwc-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--pwc-orange);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: var(--pwc-gray);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--pwc-orange);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 3px;
+  background-color: var(--pwc-gray);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.mobile-menu-toggle:hover span {
+  background-color: var(--pwc-orange);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--pwc-orange) 0%, #ff7a3d 100%);
+  color: var(--pwc-white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background-color: var(--pwc-light-gray);
+  padding-bottom: 4rem;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 3rem;
+  margin-top: -3rem;
+  position: relative;
+}
+
+/* Form Section */
+.form-section {
+  background-color: var(--pwc-white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  border-left: 4px solid var(--pwc-success);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--pwc-success);
+  font-weight: 500;
+}
+
+.success-message svg {
+  flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--pwc-white);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  margin-right: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--pwc-black);
+}
+
+.required {
+  color: var(--pwc-error);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--pwc-border);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--pwc-black);
+  transition: all 0.3s ease;
+  background-color: var(--pwc-white);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--pwc-orange);
+  box-shadow: 0 0 0 3px rgba(217, 57, 84, 0.1);
+}
+
+input.error,
+select.error,
+textarea.error {
+  border-color: var(--pwc-error);
+}
+
+input.error:focus,
+select.error:focus,
+textarea.error:focus {
+  box-shadow: 0 0 0 3px rgba(217, 57, 84, 0.15);
+}
+
+.error-message {
+  color: var(--pwc-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23464646' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+/* Checkbox */
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-top: 0.25rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  accent-color: var(--pwc-orange);
+}
+
+.checkbox-label a {
+  color: var(--pwc-orange);
+  text-decoration: underline;
+}
+
+.checkbox-label a:hover {
+  color: var(--pwc-dark-blue);
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: var(--pwc-orange);
+  color: var(--pwc-white);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(253, 81, 8, 0.25);
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #e64600;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(253, 81, 8, 0.35);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Info Section */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background-color: var(--pwc-white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h2 {
+  font-size: 1.5rem;
+  color: var(--pwc-black);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Security Badges */
+.trust-badge-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border: 1px solid var(--pwc-border);
+}
+
+.security-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--pwc-white);
+  border-radius: 8px;
+  border: 1px solid var(--pwc-border);
+}
+
+.badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pwc-gray);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: linear-gradient(135deg, #fff5f7 0%, #ffffff 100%);
+  border-left: 4px solid var(--pwc-orange);
+}
+
+.testimonial-card h3 {
+  font-size: 1.2rem;
+  color: var(--pwc-black);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.testimonial-card blockquote {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.testimonial-card blockquote p {
+  font-style: italic;
+  color: var(--pwc-gray);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-card blockquote footer {
+  font-size: 0.9rem;
+  color: var(--pwc-orange);
+  font-weight: 600;
+}
+
+.trust-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--pwc-border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 1.75rem;
+  color: var(--pwc-orange);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.stat span {
+  font-size: 0.85rem;
+  color: var(--pwc-gray);
+}
+
+.contact-method {
+  margin-bottom: 2rem;
+}
+
+.contact-method:last-child {
+  margin-bottom: 0;
+}
+
+.contact-method h3 {
+  font-size: 1.1rem;
+  color: var(--pwc-black);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-method h3 svg {
+  color: var(--pwc-orange);
+  flex-shrink: 0;
+}
+
+.contact-method p {
+  color: var(--pwc-gray);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, var(--pwc-blue) 0%, var(--pwc-dark-blue) 100%);
+  color: var(--pwc-white);
+}
+
+.cta-card h3 {
+  color: var(--pwc-white);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--pwc-white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--pwc-white);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  background-color: var(--pwc-white);
+  color: var(--pwc-blue);
+}
+
+.cta-link svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--pwc-black);
+  color: var(--pwc-white);
+  padding: 2.5rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--pwc-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-section {
+    padding: 2rem;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 73px;
+    right: -100%;
+    width: 250px;
+    height: calc(100vh - 73px);
+    background-color: var(--pwc-white);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 0;
+    transition: right 0.3s ease;
+    z-index: 99;
+  }
+
+  .nav.nav-open {
+    right: 0;
+  }
+
+  .nav a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--pwc-border);
+  }
+
+  .security-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid var(--pwc-orange);
+  outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+
+/* Live Chat Widget */
+.chat-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pwc-orange) 0%, #ff7a3d 100%);
+  color: var(--pwc-white);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(253, 81, 8, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: bounce-in 0.5s ease-out;
+}
+
+.chat-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(253, 81, 8, 0.5);
+}
+
+.chat-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: #ff3333;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes bounce-in {
+  0% { opacity: 0; transform: scale(0.3); }
+  50% { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.chat-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 350px;
+  max-height: 500px;
+  background-color: var(--pwc-white);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+  animation: slide-up 0.3s ease-out;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+  background: linear-gradient(135deg, var(--pwc-orange) 0%, #ff7a3d 100%);
+  color: var(--pwc-white);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat-header > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header strong {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.chat-header span {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.chat-close {
+  background: none;
+  border: none;
+  color: var(--pwc-white);
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.chat-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+}
+
+.chat-message {
+  background-color: var(--pwc-white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-message p {
+  margin: 0;
+  color: var(--pwc-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.chat-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--pwc-border);
+}
+
+.chat-button {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: var(--pwc-orange);
+  color: var(--pwc-white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+  background-color: #e64600;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(253, 81, 8, 0.3);
+}
+
+@media (max-width: 480px) {
+  .chat-widget {
+    width: calc(100vw - 32px);
+    right: 16px;
+    bottom: 16px;
+  }
+  .chat-trigger {
+    bottom: 16px;
+    right: 16px;
+    width: 56px;
+    height: 56px;
+  }
+}
