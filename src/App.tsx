@@ -163,12 +163,12 @@ function App() {
       <header className="header">
         <div className="container">
           <div className="logo">
-            <svg width="100" height="40" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 8h10c4 0 7 2 7 6s-3 6-7 6h-4v8H8V8zm6 8h3c1.5 0 2.5-1 2.5-2.5S18.5 11 17 11h-3v5z" fill="#D93954"/>
-              <path d="M30 8l4 10 4-10h6l-6 14-1 3c-1 2-3 3-5 3h-2v-4h1c1 0 1.5-.5 2-1.5l.5-1.5L27 8h6z" fill="#D93954"/>
-              <path d="M48 8h12v4h-6v3h5v4h-5v3h6v4H48V8z" fill="#D93954"/>
-              <circle cx="68" cy="18" r="10" stroke="#D93954" strokeWidth="2" fill="none"/>
-              <path d="M63 18l3 3 6-6" stroke="#D93954" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            <svg width="120" height="48" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g transform="translate(0, 8)">
+                <path d="M0 0h12.5c6.9 0 11.5 4.3 11.5 10.8 0 6.4-4.6 10.8-11.5 10.8H5.2V32H0V0zm5.2 17.2h6.8c4.2 0 6.8-2.4 6.8-6.4 0-4-2.6-6.4-6.8-6.4H5.2v12.8z" fill="#D04A02"/>
+                <path d="M28.5 14.5l-4.3 17.5h-5.3L25.8 0h6.4l4.8 19.2L41.8 0h5.3l5.8 19.2L57.7 0h6.4l-6.9 32h-5.3l-5.5-19.5L41.9 32h-5.3l-8.1-17.5z" fill="#D04A02"/>
+                <path d="M90.8 16.1c0 9.1-6.4 16.4-15.5 16.4-7.5 0-13.2-5.1-14.8-12.1h6c1.3 4.3 5.1 7.2 9.5 7.2 5.5 0 9.6-4.5 9.6-11.5 0-7-4.1-11.5-9.6-11.5-4.4 0-8.2 2.9-9.5 7.2h-6c1.6-7 7.3-12.1 14.8-12.1 9.1 0 15.5 7.3 15.5 16.4z" fill="#D04A02"/>
+              </g>
             </svg>
           </div>
           <button 
